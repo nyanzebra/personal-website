@@ -9,6 +9,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - uses: taiki-e/install-action@v2
         with:
           tool: zola@0.17.2
@@ -22,7 +24,7 @@ jobs:
           folder: public
           bucket: ${{ secrets.S3_BUCKET }}
           private: true
-          bucket-region: us-east-1
+          bucket-region: us-east-2
           # Use the next two only if you have created a CloudFront distribution
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           invalidation: /*
