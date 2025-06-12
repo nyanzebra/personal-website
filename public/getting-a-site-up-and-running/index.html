@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://robertjang.info/style.css">
+    <link rel="stylesheet" href="https://robertjang.info/color/blue.css">
+
+        <link rel="stylesheet" href="https://robertjang.info/color/background_purple.css">
+    
+    <link rel="stylesheet" href="https://robertjang.info/font-hack-subset.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://robertjang.info/getting-a-site-up-and-running/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="">
+    <meta property="twitter:domain" content="robertjang.info">
+    <meta property="twitter:url" content="https://robertjang.info/getting-a-site-up-and-running/">
+
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://robertjang.info" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            Robert Jang
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://robertjang.info">blog</a></li>
+            
+                <li><a href="https://robertjang.info/tags">tags</a></li>
+            
+                <li><a href="https://robertjang.info/archive">archive</a></li>
+            
+                <li><a href="https://robertjang.info/about">about me</a></li>
+            
+                <li><a href="https://github.com/nyanzebra" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://robertjang.info/getting-a-site-up-and-running/">Getting a site up and running</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2025-06-09
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://robertjang.info/tags/blog/">#blog</a>&nbsp;
+                <a class="post-tag" href="https://robertjang.info/tags/website/">#website</a>&nbsp;
+                <a class="post-tag" href="https://robertjang.info/tags/zola/">#zola</a></span>
+    
+
+        <div class="post-content">
+            <p>After looking around for a good tool to build a personal website, I first came across <a href="https://elm-lang.org/">elm</a>, but due to lack of a 1.0 and seemingly little-to-no progress on the repo I went looking some more and came across <a href="https://www.getzola.org/">zola</a>. Getting started with a project was pretty straightforward... but there were definitely some challenges!</p>
+<p>Firstly, every <a href="https://www.getzola.org/themes/">theme</a> has its own variables to set and organization for getting something up and running. For example, one theme might want a folder structure like</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">├───content
+</span><span style="color:#bf616a;">│</span><span>   ├───blog
+</span><span style="color:#bf616a;">│</span><span>   └───pages
+</span></code></pre>
+<p>while others might everything under content or use different names. This requires some trial and error, as despite each theme having some instructions, it seems mostly to be a 'figure it out yourself'.</p>
+<p>Secondly it was strange to have this hybrid handlebars / markdown style for things, but I am not a web-developer by any means, so maybe this is normal. But basically, one can define templated HTML with <code>{% block content %}</code> but then later put in the <code>content</code> folder something like below:</p>
+<pre data-lang="md" style="background-color:#2b303b;color:#c0c5ce;" class="language-md "><code class="language-md" data-lang="md"><span>+++
+</span><span>title = &quot;Magnum Opus&quot;
+</span><span>+++
+</span></code></pre>
+<p>However, despite this feeling weird to me at least, getting something up and running is not too bad and feels far easier compared to getting something up and running a decade ago...</p>
+<p>I will continue to catalog how this site progresses in future blogs, along with other content, so hope you enjoy!</p>
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Thanks for reading! Read other posts?</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                    
+                        <span class="button next">
+                            <a href="https://robertjang.info/learning-korean/">
+                                <span class="button__text">Learning Korean</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2025
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
