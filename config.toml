@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://robertjang.info"
+base_url = "http://rojang-personal-website.s3-website.us-east-2.amazonaws.com/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -14,9 +14,7 @@ theme = "terminimal"
 author = "Robert Jang"
 description = "Personal website"
 
-taxonomies = [
-    {name = "tags"},
-]
+taxonomies = [{ name = "tags" }]
 
 [markdown]
 # Whether to do syntax highlighting
@@ -31,14 +29,14 @@ logo_text = "Robert Jang"
 menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
-    {name = "blog", url = "$BASE_URL"},
-    
+    { name = "blog", url = "$BASE_URL" },
+
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    {name = "tags", url = "$BASE_URL/tags"},
-    {name = "archive", url = "$BASE_URL/archive"},
-    {name = "about me", url = "$BASE_URL/about"},
-    
+    { name = "tags", url = "$BASE_URL/tags" },
+    { name = "archive", url = "$BASE_URL/archive" },
+    { name = "about me", url = "$BASE_URL/about" },
+
     # set newtab to true to make the link open in new tab
-    {name = "github", url = "https://github.com/nyanzebra", newtab = true},
+    { name = "github", url = "https://github.com/nyanzebra", newtab = true },
 ]
