@@ -22,6 +22,13 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: ${{ secrets.AWS_S3_BUCKET }}
           source_dir: 'public'
+          destination_dir: ''  
+      - uses: shallwefootball/s3-upload-action@master
+        with:
+          aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: ${{ secrets.AWS_S3_BUCKET_ROOT }}
+          source_dir: 'public'
           destination_dir: ''
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
