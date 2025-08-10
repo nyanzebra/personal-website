@@ -1,0 +1,149 @@
+@import "../themes/terminimal/sass/style";
+
+// SCSS Variables for easy customization
+$grid-gap: 15px;
+$image-height: 400px;
+$border-radius: 8px;
+$transition-speed: 0.3s;
+
+// Breakpoint mixins
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+// Main flexbox grid
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $grid-gap;
+
+    img {
+        // Flexbox approach
+        flex: 1 1 250px; // grow, shrink, basis
+        max-width: calc(50% - #{$grid-gap / 2}); // 2x2 grid
+        height: $image-height;
+        object-fit: cover;
+        border-radius: $border-radius;
+        transition: transform $transition-speed ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        // Responsive breakpoints
+        @include tablet {
+            max-width: calc(50% - #{$grid-gap / 2}); // Still 2x2 on tablet
+        }
+
+        @include mobile {
+            max-width: 100%; // 1 column on mobile
+        }
+    }
+}
+
+// Alternative: Simple percentage approach
+.simple-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $grid-gap;
+
+    img {
+        width: 48%; // Simple approach - should always work
+        height: $image-height;
+        object-fit: cover;
+        border-radius: $border-radius;
+        transition: transform $transition-speed ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
+// CSS Grid backup (more reliable)
+.grid-backup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $grid-gap;
+
+    img {
+        width: 100%;
+        height: $image-height;
+        object-fit: cover;
+        border-radius: $border-radius;
+        transition: transform $transition-speed ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// Different grid layouts
+.grid-1x4 {
+    @extend .flex-grid;
+
+    img {
+        max-width: 100%; // Single column
+    }
+}
+
+.grid-2x2 {
+    @extend .flex-grid;
+
+    img {
+        max-width: calc(50% - #{$grid-gap / 2});
+    }
+}
+
+.grid-4x1 {
+    @extend .flex-grid;
+
+    img {
+        max-width: calc(25% - #{$grid-gap * 0.75});
+
+        @include tablet {
+            max-width: calc(50% - #{$grid-gap / 2});
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
+
+// Section wrapper styling
+/* .section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #333;
+        font-size: 1.5rem;
+    }
+} */
+
+.no-wrap {
+    flex-wrap: nowrap !important;
+}
+
+.wrap {
+    flex-wrap: wrap !important;
+}
