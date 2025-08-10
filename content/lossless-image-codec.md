@@ -23,6 +23,8 @@ Secondly, before getting started, find some good test images to work with! If yo
     </div>
 </div>
 
+This won't help much in lossless encoding, but in the following lessons it will. So just go ahead and find some now!
+
 ## Coding Lossless Implementation
 ### Encoding
 As aforementioned [this](https://blog.tempus-ex.com/hello-video-codec/) has a lot of the starting points that will be repeated here. But let's start with the high level process.
