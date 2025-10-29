@@ -1,0 +1,24 @@
+flowchart TD
+    A[Input] -->|Break into images| B(GOP pipeline)
+    B --> C{Frame Encoder}
+    C --> D[Get blocks]
+    C --> E[Compare with I-frame]
+    C --> F[B-frame]
+    C --> |Last| Z[Use compressed content]
+    
+    subgraph I-frame
+        D --> G[compress]
+    end
+    G --> |Used for other frames| C
+    
+    subgraph P-frame
+        E --> H[Calculate motion vectors]
+        H --> I[Calculate residuals]
+    end
+    I --> |Used for other frames| C
+    
+    subgraph B-frame
+        F --> J[Calculate motion vectors]
+        J --> K[Calculate residuals]
+    end
+    K --> C
