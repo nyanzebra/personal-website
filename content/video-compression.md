@@ -60,7 +60,7 @@ Now, I know I just said there are two knobs, but there is one last thing the GOP
 ## Encoding
 Encoding is where I saw some of my first performance issues. Huffman encoding, while functional, was too slow by my benchmarks, taking the majority of the time in the decoding process. Eventually I came across [Asymmetric Numeral Systems](https://en.wikipedia.org/wiki/Asymmetric_numeral_systems) and oh wow, it was so much better. While maybe not the best for compression based on entropy levels, it was an order of magnitude faster in my local testing.
 
-If you are considering a bit-level encoder and don't care about the time to compress or decompress, then using Huffman will be perfectly fine, but if you plan to use bit-level encoding in a timely manner then just use ANS, it will save you a lot of time and hassle :).
+If you are considering a bit-level encoder and don't care about the time to compress or decompress, then using Huffman will be perfectly fine, but if you plan to use bit-level encoding in a timely manner then just use ANS, it will save you a lot of time and hassle :smile:.
 
 ## Performance
 While not mentioned above, this is a very important callout. If one naively puts together their own video codec you will not get great speeds, even my own codec referenced above is probably not great for hitting 60fps of high-quality streaming content, maybe not even normal streaming... There are a few ways to achieve better performance however:

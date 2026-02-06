@@ -95,4 +95,4 @@ program.attach(&opt.iface, XdpFlags::default())
 ```
 
 ## The End
-Hopefully this provided a short summary for ebpf that is insightful and gets more people interested in learning about it :).
+Hopefully this provided a short summary for ebpf that is insightful and gets more people interested in learning about it :smile:.

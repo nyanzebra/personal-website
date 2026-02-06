@@ -6,7 +6,7 @@ tags = ["engineering", "interviews", "communication"]
 +++
 
 ## Intro
-A follow-up to this [article](./growing-as-an-engineer.md), I have been spending time working on improving communication, especially in system design interviews. I want to share a cool tool I have been using to do so :).
+A follow-up to this [article](./growing-as-an-engineer.md), I have been spending time working on improving communication, especially in system design interviews. I want to share a cool tool I have been using to do so :smile:.
 
 ## Hello Interview
 [Hello Interview](https://www.hellointerview.com/) is an online tool that presents a way to structure talking about and organizing information for a system design interview. They have a number of practice questions such as: design a job scheduler or design a url shortener. Though what really sets this tool apart from others is the feedback loop. When going through a practice problem there is an agent that will read or listen to your words and point out flaws

@@ -249,7 +249,7 @@ where
 }
 ```
 
-I will even be super nice and show a test for copying to verify personall. :)
+I will even be super nice and show a test for copying to verify personall. :smile:
 
 ```rust
 #[test]
