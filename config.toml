@@ -17,6 +17,8 @@ description = "Personal website"
 taxonomies = [{ name = "tags" }]
 
 [markdown]
+render_emoji = true
+smart_punctuation = true
 
 [markdown.highlighting]
 theme = "tokyo-night"
