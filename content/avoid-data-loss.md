@@ -9,7 +9,7 @@ tags = ["distributed-systems", "database"]
 For work I had to solve an interesting problem I found: a situation where data-loss could occur due how stores were recovered during disaster recovery. Firstly, disaster recovery in this case means everything went down, nothing is available, there are no replicas available to use. Second, the data-loss had to do with picking the wrong (sometimes) replica to recover from and then use to bring back other replicas. Lastly it is worth calling out that this is for a custom store our team built into our product and not a real database, so this was a problem that needed to be solved manually.
 
 <div class="section">
-  <img src="/imgs/recovery1.jpg", alt="3 databases"/>
+  <img src="/imgs/recovery1.svg", alt="3 databases"/>
 </div>
 
 Looking at the above diagram, let's say all the databases die, which one do you pick to recover and use to bring up the others? Obviously we want the most up-to-date database to recover from... but how?
