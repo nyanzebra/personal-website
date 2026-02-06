@@ -13,7 +13,7 @@ jobs:
           submodules: recursive
       - uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.17.2
+          tool: zola@0.22.1
       - name: Build
         run: zola build
       - uses: shallwefootball/s3-upload-action@master
@@ -22,7 +22,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: ${{ secrets.AWS_S3_BUCKET }}
           source_dir: 'public'
-          destination_dir: ''  
+          destination_dir: ''
       - uses: shallwefootball/s3-upload-action@master
         with:
           aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
